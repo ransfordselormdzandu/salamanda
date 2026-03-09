@@ -1,0 +1,2 @@
+I am happy learning Github actions with Jomacs Devops Engineering. 
+This is day two (2)

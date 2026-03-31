@@ -27,7 +27,7 @@ jobs:
 
     steps:
       - name: Docker Login
-        run: docker login --username=$DOCKER_USERNAME --password-stdin <<< "${{ secrets.DOCKER_HUB_TOKEN }}"
+        run: docker login --username=${{ vars.DOCKER_USERNAME }} --password-stdin <<< "${{ secrets.DOCKER_HUB_TOKEN }}"
 
       - name: Docker Run
         run: docker run -d -p 8080:80 ${{ vars.CONTAINER_REGISTRY }}/${{ vars.DOCKER_USERNAME }}/${{ vars.IMAGE_NAME }}:latest
